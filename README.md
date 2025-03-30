@@ -27,7 +27,7 @@ Finally, I connected the backend to the Claude API using a third-party library l
     concepts from the web stack into Swift-like patterns to better grasp the
     logic.
 
-    -Still, I have a lot more to explore and improve!
+    - Still, I have a lot more to explore and improve!
 
 ## Challenges Overcome
 
