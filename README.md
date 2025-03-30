@@ -33,7 +33,7 @@ Finally, I connected the backend to the Claude API using a third-party library l
 
 - API Key Setup: 
     The first hurdle was configuring the API key. I tried commands like $echo in 
-    the VSCode terminal, and even followed Bek Agha’s guide—but it didn’t work 
+    the VSCode terminal, and even followed Bek aga’s guide—but it didn’t work 
     for me. Eventually, I found a smoother solution using the RooCode VS 
     extension, where I just pasted the key directly.
 
