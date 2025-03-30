@@ -1,59 +1,6 @@
-# AI Mood Chat
 
-A chat application that analyzes your mood and provides personalized advice using Claude AI.
+# Chat Mood Application
 
-## Features
-
-- Real-time mood analysis with emoji representation
-- Color-coded responses based on detected mood
-- Personalized advice based on your messages
-- Clean, responsive UI
-
-## Local Development
-
-1. Clone the repository
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Create a `.env` file in the root directory with your Claude API key:
-   ```
-   CLAUDE_API_KEY=your-api-key-here
-   PORT=3001
-   ```
-4. Start the development server:
-   ```
-   npm run start
-   ```
-   This will start both the backend server and the frontend development server.
-
-## Deploying to Vercel
-
-1. Push your code to a GitHub repository
-
-2. Connect your repository to Vercel:
-   - Go to [Vercel](https://vercel.com) and sign in
-   - Click "New Project"
-   - Import your GitHub repository
-   - Configure the project:
-     - Build Command: `npm run build`
-     - Output Directory: `dist`
-     - Install Command: `npm install`
-
-3. Add Environment Variables:
-   - In the Vercel project settings, add the following environment variable:
-     - `CLAUDE_API_KEY`: Your Claude API key
-
-4. Deploy:
-   - Click "Deploy"
-   - Vercel will automatically build and deploy your application
-
-## Project Structure
-
-- `src/`: Frontend React application
-- `server/`: Backend Express server
-- `server/langchain.js`: Claude AI integration for mood analysis
-- `vercel.json`: Vercel deployment configuration
 
 ## Technologies Used
 
@@ -61,3 +8,46 @@ A chat application that analyzes your mood and provides personalized advice usin
 - Backend: Express.js, Node.js
 - AI: Claude API (Anthropic)
 - Deployment: Vercel
+
+## Approach
+
+I developed the project in three main stages: 
+- UI Development: 
+I started with the frontend, building the user interface using React and TypeScript. 
+
+- Backend Implementation:
+Next, I set up the backend with Express.js (which felt readable and intuitive) and added some simulation logic to test interactions.
+
+- AI Integration:
+Finally, I connected the backend to the Claude API using a third-party library like Langchain.js.
+
+## Learning
+- Learning part,
+    - While building the UI, I leaned on my familiarity with Swift. I translated
+    concepts from the web stack into Swift-like patterns to better grasp the
+    logic.
+
+    -Still, I have a lot more to explore and improve!
+
+## Challenges Overcome
+
+- API Key Setup: 
+    The first hurdle was configuring the API key. I tried commands like $echo in 
+    the VSCode terminal, and even followed Bek Agha’s guide—but it didn’t work 
+    for me. Eventually, I found a smoother solution using the RooCode VS 
+    extension, where I just pasted the key directly.
+
+- Tailwind CSS Issues:
+    I initially chose Tailwind CSS for its readability over plain CSS. However, 
+    I ran into package issues—possibly related to Claude Code’s auto- 
+    installation. Instead of digging into the problem, I opted to switch to 
+    regular CSS, which worked fine.
+
+- Multiple Requests to Claude:
+    At first, I planned to send two separate API requests to get an Emoji and an 
+    Advice, thinking in terms of transactional atomicity. But Claude Code 
+    introduced me to a smarter approach: send one request and receive a 
+    structured JSON response with everything I needed. (Honestly, not sure why I 
+    didn’t think of that first 😄)
+
+- There were a few other minor hiccups, but nothing worth diving into here.
